@@ -7,10 +7,20 @@ using System.Threading.Tasks;
 
 namespace subject_info.Repositories
 {
+    /// <summary>
+    /// A repository that manages subject that are hardcoded in the class.
+    /// </summary>
+    /// <remarks>
+    /// This class implements the <see cref="ISubjectRepository"/> interface 
+    /// that provides crucial methods for retriving and managing subjects.
+    /// </remarks>
     public class PredefinedSubjectRepository : ISubjectRepository
     {
         private List<Subject> subjects = new();
 
+        /// <summary>
+        /// Load subjects by generating new subject instances with additional coresponding literature.
+        /// </summary>
         public void LoadSubjects()
         {
             subjects.Clear();
@@ -47,5 +57,18 @@ namespace subject_info.Repositories
         }
 
         public List<Subject> GetAllSubjects() => subjects;
+
+        public Subject GetSubjectByName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Subject name must be provided.", nameof(name));
+
+            var subject = subjects.FirstOrDefault(s => s.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+            if (subject == null)
+                throw new KeyNotFoundException($"No subject found with the name '{name}'.");
+
+            return subject;
+        }
     }
 }
