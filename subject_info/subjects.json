@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 4,
+    "Name": "Biology",
+    "Description": "Study of life and organisms",
+    "WeeklyClasses": 3,
+    "AdditionalInfo": "Science core",
+    "Literature": [
+      {
+        "Id": 10,
+        "Title": "Basics of Biology",
+        "YearPublished": 2014,
+        "SubjectId": 4,
+        "Authors": [ "Dr. Green" ]
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "History",
+    "Description": "Human history and civilization",
+    "WeeklyClasses": 2,
+    "AdditionalInfo": "Elective",
+    "Literature": [
+      {
+        "Id": 11,
+        "Title": "World History Vol. 1",
+        "YearPublished": 2010,
+        "SubjectId": 5,
+        "Authors": [ "Anna Historian" ]
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Physics",
+    "Description": "Fundamentals of physical laws",
+    "WeeklyClasses": 4,
+    "AdditionalInfo": "Science core",
+    "Literature": [
+      {
+        "Id": 12,
+        "Title": "Introduction to Physics",
+        "YearPublished": 2017,
+        "SubjectId": 6,
+        "Authors": [ "Isaac N." ]
+      }
+    ]
+  }
+]
