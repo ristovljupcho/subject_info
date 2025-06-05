@@ -23,12 +23,16 @@ namespace subject_info.Entities
             Authors = authors ?? new List<string>();
         }
 
+        private string GetAuthors()
+        {
+            return Authors.Count > 0 ? string.Join(", ", Authors) : "Unknown";
+        }
+
         public string GetDetails()
         {
-            var authorNames = Authors.Count > 0
-                ? string.Join(", ", Authors)
-                : "Unknown";
-            return $"{Title} by {authorNames} ({YearPublished})";
+            var authorNames = GetAuthors();
+
+            return $"{Title} by {authorNames} year published - {YearPublished}";
         }
     }
 }
