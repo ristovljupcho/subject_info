@@ -9,9 +9,3 @@ A C# console application to display information about subjects. Users can choose
 - Supports multiple data sources:
   - Predefined subjects
   - JSON file (`subjects.json`)
-
-## Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
